@@ -1,0 +1,189 @@
+
+@import 'normalizecss/normalize.css'
+
+@import 'prism/themes/prism-okaidia.css'
+
+$smurf = #487FC1
+$lips = #F05562
+
+a
+  color: #fff
+
+.bespoke-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+
+.bespoke-slide
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: #000
+  color: white
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-bullet-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-backdrop
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: -1
+  opacity: 0
+
+.bespoke-backdrop-active
+  opacity: 1
+
+.bespoke-progress-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: .3vw
+
+.bespoke-progress-bar
+  position: absolute
+  height: 100%
+  background: #ccc
+  transition: width .6s ease
+
+body
+  font-family: 'Museo Sans'
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+h1,h2,h3
+  font-weight: 100
+  position: relative;
+h1
+  font-size: 40px
+h2
+  font-size: 35px
+h3
+  font-size: 30px
+p
+  font-size: 30px
+  font-weight: 100
+  line-height 1.5
+strong
+  font-weight: 500
+
+.pad-sm
+  padding: 0 20px
+.pad-lg
+  padding: 0 50px
+
+.bg
+  background-size: cover
+  text-shadow: 0 1px #000, 0 2px 10px #000, 0 4px 20px #000
+  text-align: center
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    background: rgba(#000, .2)
+    background-image: radial-gradient(transparent, rgba(#000, .6))
+    background-size: cover
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  > *
+    position: relative
+    z-index: 10
+
+.yellow-bg
+  background: #f5da55
+  color: #000
+  text-align: center
+
+.flex
+  display: flex
+  width: 100%
+
+.flex-1
+  flex: 1
+  position: relative
+
+pre
+  min-width: 500px
+
+.text-center
+  text-align: center
+
+.smurf
+  fill: $smurf
+.lips
+  fill: $lips
+
+.features
+  position: absolute
+  left: 0
+  top: 15px
+  list-style: none
+  margin: 0;
+  text-align: left
+  transition: 20s linear
+  transform: translate(0, 300px)
+  font-size: 20px
+  li
+    margin: 0 0 1em
+    padding: 0
+  .divider
+    height: 3px;
+    background: rgba(0,0,0,.1)
+
+.feature
+  fill: #fff
+  opacity: 0
+  transition: .3s
+
+.big-feature
+  transition: 1s
+  transform-origin: 500px 250px
+
+.delay-1 { transition-delay: .5s }
+.delay-2 { transition-delay: 1s }
+.delay-3 { transition-delay: 1.5s }
+.delay-4 { transition-delay: 2s }
+.delay-5 { transition-delay: 2.5s }
+.delay-6 { transition-delay: 3s }
+.delay-7 { transition-delay: 3.5s }
+.delay-8 { transition-delay: 4s }
+.delay-9 { transition-delay: 4.5s }
+.delay-10 { transition-delay: 5s }
+.delay-11 { transition-delay: 5.5s }
+.delay-12 { transition-delay: 6s }
+.delay-13 { transition-delay: 6.5s }
+.delay-14 { transition-delay: 7s }
+.delay-15 { transition-delay: 7.5s }
+.delay-16 { transition-delay: 8s }
+.delay-17 { transition-delay: 8.5s }
+.delay-18 { transition-delay: 9s }
+
+#features-slide.bespoke-active
+  .features
+    transform: translate(0, -1200px)
+
+  .feature
+    opacity: .4
+
+  .big-feature
+    transform: scale(4)
+    opacity: 1
